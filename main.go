@@ -1,20 +1,23 @@
+// main.go
 package main
 
 import (
 	"fmt"
 	"net/http"
+	"github.com/gorilla/mux"
 )
 
 func handleHello(w http.ResponseWriter, r *http.Request) {
 	name := r.URL.Query().Get("name")
 	if name == "" {
-		name = "World-v1"
+		name = "World"
 	}
 	fmt.Fprintf(w, "Hello %s!", name)
 }
 
 func main() {
-	http.HandleFunc("/hello", handleHello)
-	fmt.Println("Server is listening on port 8081...")
-	http.ListenAndServe(":8081", nil)
-}
+	r := mux.NewRouter()
+	r.HandleFunc("/hello", handleHello).Methods("GET")
+	fmt.Println("Server is listening on port 8080...")
+	http.ListenAndServe(":8080", r)
+}listening
