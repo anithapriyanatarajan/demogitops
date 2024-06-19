@@ -8,7 +8,7 @@ import (
 func handleHello(w http.ResponseWriter, r *http.Request) {
 	name := r.URL.Query().Get("name")
 	if name == "" {
-		name = "World"
+		name = "World-v1"
 	}
 	fmt.Fprintf(w, "Hello %s!", name)
 }
