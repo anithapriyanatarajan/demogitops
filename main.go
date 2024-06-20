@@ -1,9 +1,11 @@
 // main.go
+// test if the build trigger works
 package main
 
 import (
 	"fmt"
 	"net/http"
+
 	"github.com/gorilla/mux"
 )
 
