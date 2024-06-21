@@ -20,6 +20,6 @@ func handleHello(w http.ResponseWriter, r *http.Request) {
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/hello", handleHello).Methods("GET")
-	fmt.Println("Server is listening on port 8080...")
-	http.ListenAndServe(":8080", r)
+	fmt.Println("Server is listening on port 8084...")
+	http.ListenAndServe(":8084", r)
 }
