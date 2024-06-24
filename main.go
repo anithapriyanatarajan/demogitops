@@ -14,7 +14,7 @@ func handleHello(w http.ResponseWriter, r *http.Request) {
 	if name == "" {
 		name = "World"
 	}
-	fmt.Fprintf(w, "Hello %s!", name)
+	fmt.Fprintf(w, "Hello %s!.You are TEDDYSOME!!", name)
 }
 
 func main() {
