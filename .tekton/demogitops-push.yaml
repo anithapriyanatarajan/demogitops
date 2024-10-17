@@ -10,7 +10,7 @@ metadata:
       == "master"
   creationTimestamp: null
   labels:
-    appstudio.openshift.io/application: blah-blah
+    appstudio.openshift.io/application: mew
     appstudio.openshift.io/component: demogitops
     pipelines.appstudio.openshift.io/type: build
   name: demogitops-on-push
